@@ -1,0 +1,160 @@
+:root {
+    --palette1: #655643;
+    --palette2: #80bca3;
+    --palette3: #f6f7bd;
+    --palette4: #e6ac27;
+    --palette5: #bf4d28;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* end of josh w comeau's reset css */
+
+body {
+    background: var(--palette3);
+    display: flex;
+    place-items: flex-start;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    height: 100%;
+}
+
+.game {
+    height: 100%;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.startNewGameButton {
+    background: var(--palette2);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    border-radius: 0.3rem;
+}
+.startNewGameButton {
+    padding: 0.3rem 0.7rem;
+}
+
+.guesses {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 3rem;
+    justify-content: flex-start;
+}
+
+.guess {
+    background: white;
+    width: 5rem;
+    user-select: none;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem var(--palette1);
+}
+.startNewGameButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.higherLowerIndicator {
+    font-size: 3rem;
+    background: var(--palette4);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.gameOverAnnouncement {
+    font-size: 3rem;
+    background: var(--palette4);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+.win {
+    background: var(--palette4);
+}
+.loss {
+    background: var(--palette1);
+}
