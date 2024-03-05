@@ -1,6 +1,11 @@
 # higher-lower game, in react
 
-# React + TypeScript + Vite
+This solution is not suitable for beginners - I've used useReducer, and the auto-advance feature also adds unnecessary complexity, too.
+
+[watch it played](https://www.youtube.com/watch?v=a1MDqJJoGZg)
+
+
+# Original template docs: React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
