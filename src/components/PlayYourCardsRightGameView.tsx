@@ -14,10 +14,14 @@ import { useAutoTurnCard } from "./useAutoTurnCard";
 import { WinLoseView } from "./WinLoseView";
 
 export function PlayYourCardsRightGameView() {
-    const initialState = createInitialState();
-    // const initialState = createInitialState(4, [1, 2, 10])//example for testing
-
-    const [state, dispatch] = useReducer(reducerFunction, initialState);
+    const [state, dispatch] = useReducer(
+        reducerFunction,
+        {
+            gameLen: 4,
+            initialDrawDeck: [1, 2, 10],
+        },
+        createInitialState
+    );
     const winState = selectWinState(state);
     const isGameOver = selectIsGameOver(state);
 

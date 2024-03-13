@@ -8,10 +8,13 @@ export interface GameState {
     gameLen: number;
 }
 
-export function createInitialState(
-    gameLen: number = 3,
-    initialDrawDeck?: number[]
-): GameState {
+export function createInitialState({
+    gameLen = 3,
+    initialDrawDeck,
+}: {
+    gameLen: number;
+    initialDrawDeck?: number[];
+}): GameState {
     const drawDeck =
         initialDrawDeck ??
         shuffle(Array.from({ length: 52 }, (_, i) => (i % 15) + 1));
